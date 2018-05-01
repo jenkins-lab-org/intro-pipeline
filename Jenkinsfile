@@ -11,6 +11,12 @@ pipeline {
         sh 'java -version'
       }
     }    
+       stage('Checkpoint') {
+         agent none
+         steps {
+            checkpoint 'Checkpoint'
+         }
+      }
     stage('Testing') {
             input {
         message "Should we continue?"
