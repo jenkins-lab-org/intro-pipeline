@@ -18,9 +18,6 @@ pipeline {
          }
       }
     stage('Testing') {
-            input {
-        message "Should we continue?"
-      }
       failFast true
       parallel {
         stage('Java 8') {
